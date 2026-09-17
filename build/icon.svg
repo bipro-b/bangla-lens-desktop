@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0"   stop-color="#12B074"/>
+      <stop offset="0.55" stop-color="#068A5C"/>
+      <stop offset="1"   stop-color="#03543F"/>
+    </linearGradient>
+    <linearGradient id="gloss" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="512" height="512" rx="114" fill="url(#bg)"/>
+  <rect width="512" height="512" rx="114" fill="url(#gloss)"/>
+
+  <!-- magnifier handle (drawn first so the ring overlaps it cleanly) -->
+  <line x1="322" y1="322" x2="418" y2="418"
+        stroke="#03402F" stroke-opacity="0.35" stroke-width="52" stroke-linecap="round"/>
+  <line x1="318" y1="318" x2="414" y2="414"
+        stroke="#ffffff" stroke-width="46" stroke-linecap="round"/>
+
+  <!-- lens -->
+  <circle cx="228" cy="228" r="118" fill="#E63946"/>
+  <circle cx="228" cy="228" r="135" fill="none" stroke="#ffffff" stroke-width="34"/>
+
+  <!-- Bengali 'aa' -->
+  <text x="228" y="228" fill="#ffffff"
+        font-family="Nirmala UI, Vrinda, Shonar Bangla, Segoe UI, sans-serif"
+        font-size="138" text-anchor="middle" dominant-baseline="central">&#2438;</text>
+</svg>

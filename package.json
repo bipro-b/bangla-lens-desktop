@@ -1,0 +1,39 @@
+{
+  "name": "bangla-lens",
+  "version": "1.0.0",
+  "description": "Select English anywhere, press Alt+B, get Bangla.",
+  "author": "Bipro",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "icon": "node build/mkicon.js",
+    "dist": "electron-builder --win portable",
+    "dist:setup": "electron-builder --win nsis"
+  },
+  "devDependencies": {
+    "electron": "^31.7.0",
+    "electron-builder": "^24.13.3",
+    "png-to-ico": "^3.0.2",
+    "sharp": "^0.35.4"
+  },
+  "build": {
+    "appId": "com.bipro.banglalens",
+    "productName": "BanglaLens",
+    "files": ["main.js", "preload.js", "keys.js", "translate.js", "popup.html", "tray.png"],
+    "win": {
+      "target": ["nsis", "portable"],
+      "icon": "build/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "BanglaLens",
+      "installerIcon": "build/icon.ico",
+      "uninstallerIcon": "build/icon.ico",
+      "installerHeaderIcon": "build/icon.ico"
+    }
+  }
+}

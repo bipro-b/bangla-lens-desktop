@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+
+# Build output — the .exe ships as a GitHub release asset, never in the repo
+dist/
+out/
+
+# Generated icon previews (icon.svg + mkicon.js are the source of truth)
+build/preview-*.png
+
+# Editor / tooling
+.kilo/
+.vscode/
+.idea/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-error.log*
+
+# Environment
+.env
+.env.*
+
+# OS cruft
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
