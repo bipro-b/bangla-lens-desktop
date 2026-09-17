@@ -19,9 +19,19 @@
   "build": {
     "appId": "com.bipro.banglalens",
     "productName": "BanglaLens",
-    "files": ["main.js", "preload.js", "keys.js", "translate.js", "popup.html", "tray.png"],
+    "files": [
+      "main.js",
+      "preload.js",
+      "keys.js",
+      "translate.js",
+      "popup.html",
+      "tray.png"
+    ],
     "win": {
-      "target": ["nsis", "portable"],
+      "target": [
+        "nsis",
+        "portable"
+      ],
       "icon": "build/icon.ico"
     },
     "nsis": {
@@ -33,7 +43,17 @@
       "shortcutName": "BanglaLens",
       "installerIcon": "build/icon.ico",
       "uninstallerIcon": "build/icon.ico",
-      "installerHeaderIcon": "build/icon.ico"
+      "installerHeaderIcon": "build/icon.ico",
+      "artifactName": "BanglaLens-Setup-${version}.exe"
+    },
+    "portable": {
+      "artifactName": "BanglaLens-${version}-portable.exe"
     }
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/bipro-b/bangla-lens-desktop",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bipro-b/bangla-lens-desktop.git"
   }
 }

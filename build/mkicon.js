@@ -13,7 +13,7 @@ const png = (size) => sharp(svg, { density: 512 }).resize(size, size).png().toBu
   const bufs = await Promise.all(icoSizes.map(png));
   fs.writeFileSync(path.join(dir, 'icon.ico'), await pngToIco(bufs));
 
-  fs.writeFileSync(path.join(dir, 'preview-512.png'), await png(512));
+  fs.writeFileSync(path.join(dir, 'logo.png'), await png(512));
   for (const s of [16, 32]) fs.writeFileSync(path.join(dir, `preview-${s}.png`), bufs[icoSizes.indexOf(s)]);
 
   // tray needs a 32px png shipped with the app
